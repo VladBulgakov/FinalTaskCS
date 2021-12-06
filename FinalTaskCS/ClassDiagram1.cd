@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EducationalCenter.Administrator">
+    <Position X="9.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAJAAIAAEAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Administrator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EducationalCenter.Homework">
+    <Position X="11.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAAAAAAAEAAAAACAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Homework.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EducationalCenter.Manager">
+    <Position X="16" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAQBAAAACEgAAAAAAgAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Manager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EducationalCenter.Person" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAACAAAAAAAAAEAAAIAAQABAAAAAAAAAAACAAgAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EducationalCenter.Program">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EducationalCenter.Student">
+    <Position X="11.5" Y="1.75" Width="2" />
+    <InheritanceLine Type="EducationalCenter.Person" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="1.062" />
+        <Point X="13" Y="1.375" />
+        <Point X="12.625" Y="1.375" />
+        <Point X="12.625" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAACIAAEAAAAAIAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EducationalCenter.Teacher">
+    <Position X="13.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgAAABAAAAAEAAAAgAAAAAAAgAAAAAAAAAAAQQA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="EducationalCenter.IEmployee">
+    <Position X="18.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
