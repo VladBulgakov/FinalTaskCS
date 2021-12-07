@@ -27,35 +27,35 @@ namespace EducationalCenter
             TeacherHiredDate = teacherHiredDate;
         }
 
-        public void PerformOfficialDuties(object Input)
+        public string PerformOfficialDuties(object Input)
         {
             if (Input is Homework)
             {
+                string TeacherSays = String.Empty;
                 Homework hw = (Homework)Input;
-                Console.WriteLine($"\"Проверим домашнее задание студента {hw.MadeBy.Surname} {hw.MadeBy.Name}...\"");
-                Console.WriteLine("\"Он пишет:\"");
-                Console.WriteLine($"\"{hw.HomeworkText}\"");
+                TeacherSays = $"\"Проверим домашнее задание студента {hw.MadeBy.Surname} {hw.MadeBy.Name}...\"\n\"Он пишет:\"\n\"{hw.HomeworkText}\"";
                 if (hw.HomeworkText.Length>20)
                 {
-                    Console.WriteLine("\"Хорошая работа!\"");
+                    TeacherSays += "\n\"Хорошая работа!\"";
                     hw.Check(this, true);
+                    return TeacherSays;
                 }
                 else
                 {
-                    Console.WriteLine("\"Маловато, пускай еще раз попробует\"");
+                    TeacherSays += "\n\"Маловато, пускай еще раз попробует\"";
                     hw.Check(this, false);
+                    return TeacherSays;
                 }
             }
             else
             {
-                Console.WriteLine("\"Не знаю что это такое\"");
+                return "\"Не знаю что это такое\"";
             }
         }
 
         public override string ToString()
         {
-            string stInfo = string.Format($"ПРЕПОДАВАТЕЛЬ\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nФакультет: {TeacherFaculty} Должность: {TeacherPosition}\nНачал работать: {TeacherHiredDate} (стаж {this.Experience()} лет)\nСейчас имеет зарплату {CalculateSalary()} рублей");
-            return stInfo;
+            return $"ПРЕПОДАВАТЕЛЬ\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nФакультет: {TeacherFaculty} Должность: {TeacherPosition}\nНачал работать: {TeacherHiredDate} (стаж {this.Experience()} лет)\nСейчас имеет зарплату {CalculateSalary()} рублей";
         }
     }
 }

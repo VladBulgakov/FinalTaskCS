@@ -27,24 +27,22 @@ namespace EducationalCenter
             ManagerHiredDate = teacherHiredDate;
         }
 
-        public void PerformOfficialDuties(object Input)
+        public string PerformOfficialDuties(object Input)
         {
             if (Input is Person)
             {
                 Person person = (Person)Input;
-                Console.WriteLine($"\"Я знаю этого человека! Это {person.Surname} {person.Name}. {((person is IEmployee)? "Он из персонала" : "")}\"");
-                //if (person is IEmployee) Console.WriteLine("Он из нашего коллектива");
+                return $"\"Я знаю этого человека! Это {person.Surname} {person.Name}. {((person is IEmployee)? "Он из персонала" : "")}\"";
             }
             else
             {
-                Console.WriteLine("\"Ну что тут скажешь...\"");
+                return "\"Ну что тут скажешь...\"";
             }
         }
 
         public override string ToString() //Переопределение метода для вывода информации
         {
-            string stInfo = string.Format($"МЕНЕДЖЕР\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nФакультет: {ManagerFaculty} Должность: {ManagerPosition}\nНачал работать: {ManagerHiredDate} (стаж {this.Experience()} лет)\nСейчас имеет зарплату {CalculateSalary()} рублей");
-            return stInfo;
+            return $"МЕНЕДЖЕР\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nФакультет: {ManagerFaculty} Должность: {ManagerPosition}\nНачал работать: {ManagerHiredDate} (стаж {this.Experience()} лет)\nСейчас имеет зарплату {CalculateSalary()} рублей";
         }
     }
 }

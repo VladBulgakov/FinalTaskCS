@@ -25,15 +25,14 @@ namespace EducationalCenter
             AdministratorHiredDate = administratorHiredDate;
         }
 
-        public void PerformOfficialDuties(object Input)
+        public string PerformOfficialDuties(object Input)
         {
-            Console.WriteLine($"<Наводит порядок в лабратории {AdministratorLabName}>");
+            return $"<Наводит порядок в лабратории {AdministratorLabName}>";
         }
 
         public override string ToString()
         {
-            string stInfo = string.Format($"АДМИНИСТРАТОР\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nЛаборатория: {AdministratorLabName}\nНачал работать: {AdministratorHiredDate} (стаж {this.Experience()} лет)\nСейчас имеет зарплату {CalculateSalary()} рублей");
-            return stInfo;
+            return $"АДМИНИСТРАТОР\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nЛаборатория: {AdministratorLabName}\nНачал работать: {AdministratorHiredDate} (стаж {this.Experience()} лет)\nСейчас имеет зарплату {CalculateSalary()} рублей";
         }
     }
 }

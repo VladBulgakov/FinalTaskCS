@@ -39,15 +39,14 @@ namespace EducationalCenter
 
         public override string ToString()
         {
-            string stInfo = string.Format($"ЧЕЛОВЕК\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}");
-            return stInfo;
+            return $"ЧЕЛОВЕК\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}";
         }
     }
 
     interface IEmployee
     {
         int Experience();
-        void PerformOfficialDuties(object Input);
+        string PerformOfficialDuties(object Input);
 
         decimal CalculateSalary();
     }

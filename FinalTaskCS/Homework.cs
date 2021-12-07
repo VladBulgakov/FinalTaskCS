@@ -21,19 +21,22 @@ namespace EducationalCenter
             }
         }
 
-        public void Check(Person checkedBy, bool Result)
+        public string Check(Person checkedBy, bool Result)
         {
             if (checkedBy is not Teacher)
             {
-                Console.WriteLine("Домашнее задание должен проверять учитель!");
+                return "Домашнее задание должен проверять учитель!";
             }
-            else IsOk = Result;
+            else
+            {
+                IsOk = Result;
+                return "Домашнее задание проверено";
+            }
         }
 
         public override string ToString()
         {
-            string stInfo = string.Format($"Домашнее задание. Автор - {MadeBy.Name} {MadeBy.Surname}\n{HomeworkText}\nПроверено и принято: {IsOk}");
-            return stInfo;
+            return $"Домашнее задание. Автор - {MadeBy.Name} {MadeBy.Surname}\n{HomeworkText}\nПроверено и принято: {IsOk}";
         }
     }
 }

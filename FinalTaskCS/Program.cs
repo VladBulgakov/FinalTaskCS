@@ -30,17 +30,17 @@ namespace EducationalCenter
             Homework hw2 = new Homework(man2,"Какой-то текст");
 
             Console.WriteLine("\nСпросим менеджера, что он думает о домашнем задании:");
-            man2.PerformOfficialDuties(hw1);
+            Console.WriteLine(man2.PerformOfficialDuties(hw1));
             Console.WriteLine("\nСпросим его, знает ли он двух людей - студента и учителя:");
-            man2.PerformOfficialDuties(man1);
-            man2.PerformOfficialDuties(man3);
+            Console.WriteLine(man2.PerformOfficialDuties(man1));
+            Console.WriteLine(man2.PerformOfficialDuties(man3));
             Console.WriteLine("\nДадим учителю <что-то>");
-            man3.PerformOfficialDuties(11);
+            Console.WriteLine(man3.PerformOfficialDuties(11));
             Console.WriteLine("\nЕсть домашнее задание студента:");
             Console.WriteLine(hw1);
             Console.WriteLine("\nДадим его на проверку учителю:");
-            man3.PerformOfficialDuties(hw1);
-            Console.WriteLine("\nИ вот оно проверено (или нет):");
+            Console.WriteLine(man3.PerformOfficialDuties(hw1));
+            Console.WriteLine("\nИ вот оно проверено и принято (или не принято):");
             Console.WriteLine(hw1);
         }
     }

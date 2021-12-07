@@ -17,8 +17,7 @@ namespace EducationalCenter
 
         public string SayHi()
         {
-            string stSay = string.Format($"\"Привет. Меня зовут {Surname} {Name}, я студент\nВ свободное время я хожу в кино на стипендию, она у меня {StudentScholarship} рублей\"");
-            return stSay;
+            return $"\"Привет. Меня зовут {Surname} {Name}, я студент\nВ свободное время я хожу в кино на стипендию, она у меня {StudentScholarship} рублей\"";
         }
 
         public Homework DoHomework()
@@ -32,8 +31,7 @@ namespace EducationalCenter
 
         public override string ToString()
         {
-            string stInfo = string.Format($"СТУДЕНТ\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nФакультет: {StudentFaculty} Номер группы: {StudentGroupNumber}\nСтипендия: {StudentScholarship}");
-            return stInfo;
+            return $"СТУДЕНТ\nИмя: {Name} Фамилия: {Surname} Отчество: {Patronymic}\nДата рождения: {BirthDate}\nФакультет: {StudentFaculty} Номер группы: {StudentGroupNumber}\nСтипендия: {StudentScholarship}";
         }
     }
 }
